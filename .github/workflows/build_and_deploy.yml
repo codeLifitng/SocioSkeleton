@@ -38,9 +38,18 @@ jobs:
 
       - name: Grant execute permission to mvnw
         working-directory: ${{ matrix.service }}
-        run: chmod +x ./mvn
+        run: |
+          if [ -f "mvnw" ]; then
+            chmod +x mvnw
+          else
+            echo "Skipping chmod as mvnw does not exist in ${{ matrix.service }}"
+          fi
 
       - name: Build and Push ${{ matrix.service }}
         working-directory: ${{ matrix.service }}
         run: |
-          ./mvnw clean package -DskipTests
+          if [ -f "mvnw" ]; then
+            ./mvnw clean package -DskipTests
+          else
+            echo "Skipping build as mvnw does not exist in ${{ matrix.service }}"
+          fi
