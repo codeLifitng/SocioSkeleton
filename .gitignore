@@ -1,0 +1,61 @@
+# Compiled Java classes
+*.class
+
+# Log files
+*.log
+*.out
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+*.bak
+
+# Directories
+/bin/
+/target/
+/out/
+
+# Maven files
+.mvn/
+target/
+dependency-reduced-pom.xml
+
+# IntelliJ IDEA
+.idea/
+/*.iml
+*.iws
+.idea_modules/
+
+# Eclipse/STS
+*.classpath
+*.project
+*.settings/
+
+# VS Code
+.vscode/
+
+# Operating System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Packaging
+*.jar
+*.war
+*.ear
+
+# Logs and debug
+hs_err_pid*
+pid
+dumpfile
+
+# Tools and dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+
+# Swagger files
+.swagger-codegen/
