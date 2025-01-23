@@ -16,7 +16,7 @@ jobs:
           - discovery-server
           - api-gateway
           - connections_service
-          - notification-service
+          - notfication-service
           - posts_service
           - user-service
 
