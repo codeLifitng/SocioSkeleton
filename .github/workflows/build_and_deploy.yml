@@ -36,6 +36,10 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
+      - name: Grant execute permission to mvnw
+        working-directory: ${{ matrix.service }}
+        run: chmod +x mvn
+
       - name: Build and Push ${{ matrix.service }}
         working-directory: ${{ matrix.service }}
         run: |
