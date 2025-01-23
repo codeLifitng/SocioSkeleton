@@ -15,9 +15,9 @@ jobs:
         service:
           - discovery-server
           - api-gateway
-          - connections-service
+          - connections_service
           - notfication-service
-          - posts-service
+          - posts_service
           - user-service
 
     steps:
