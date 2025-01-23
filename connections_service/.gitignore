@@ -17,7 +17,6 @@
 /out/
 
 # Maven files
-.mvn/
 target/
 dependency-reduced-pom.xml
 
