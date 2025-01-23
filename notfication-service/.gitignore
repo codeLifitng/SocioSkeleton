@@ -1,32 +1,60 @@
-HELP.md
+# Compiled Java classes
+*.class
+
+# Log files
+*.log
+*.out
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+*.bak
+
+# Directories
+/bin/
+/target/
+/out/
+
+# Maven files
 target/
-!**/src/main/**/target/
-!**/src/test/**/target/
+dependency-reduced-pom.xml
 
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-
-### IntelliJ IDEA ###
-.idea
+# IntelliJ IDEA
+.idea/
+/*.iml
 *.iws
-*.iml
-*.ipr
+.idea_modules/
 
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
+# Eclipse/STS
+*.classpath
+*.project
+*.settings/
 
-### VS Code ###
+# VS Code
 .vscode/
+
+# Operating System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Packaging
+*.jar
+*.war
+*.ear
+
+# Logs and debug
+hs_err_pid*
+pid
+dumpfile
+
+# Tools and dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+
+# Swagger files
+.swagger-codegen/
