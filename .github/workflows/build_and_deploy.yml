@@ -38,7 +38,7 @@ jobs:
 
       - name: Grant execute permission to mvnw
         working-directory: ${{ matrix.service }}
-        run: chmod +x mvn
+        run: chmod +x ./mvn
 
       - name: Build and Push ${{ matrix.service }}
         working-directory: ${{ matrix.service }}
