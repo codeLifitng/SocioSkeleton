@@ -1,17 +1,13 @@
 package com.SocioSkeleton.posts_service.controller;
 
 import com.SocioSkeleton.posts_service.auth.UserContextHolder;
+import com.SocioSkeleton.posts_service.dto.PostDto;
+import com.SocioSkeleton.posts_service.model.PostCreateRequestModel;
+import com.SocioSkeleton.posts_service.service.PostsService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import com.SocioSkeleton.posts_service.dto.PostDto;
-import com.SocioSkeleton.posts_service.entity.Post;
-import com.SocioSkeleton.posts_service.model.PostCreateRequestModel;
-import com.SocioSkeleton.posts_service.service.PostsService;
-
-import jakarta.servlet.http.HttpServletRequest;
 
 import java.util.List;
 
