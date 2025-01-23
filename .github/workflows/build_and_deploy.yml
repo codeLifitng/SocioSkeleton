@@ -1,0 +1,42 @@
+name: Springboot CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        service:
+          - discovery-server
+          - api-gateway
+          - connections_service
+          - notification-service
+          - posts_service
+          - user-service
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Java 21
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+
+      - name: Log in to Docker Hub
+        uses: docker/login-actions@v2
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Build and Push ${{ matrix.service }}
+        working-directory: ${{ matrix.service }}
+        run: |
+          ./mvnw clean package -DskipTests
